@@ -13,16 +13,6 @@ fn main(
 
 }
 
-// #[builtin(to_le_bits)]
-// fn to_le_bits(_x : [Field; LEVELS], _bit_size: u32) -> [u1] {}
-
-fn poseidon1(
-  message: Field,
-)  -> Field {
-    let leaf = std::hash::poseidon::bn254::hash_1([message]);
-    leaf
-}
-
 fn calculate_root(
     message: Field,
     pathIndices: [Field; LEVELS],
